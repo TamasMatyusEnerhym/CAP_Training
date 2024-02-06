@@ -18,8 +18,32 @@
     "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false",
     "watch-mitigations": "cds watch --open mitigations/webapp/index.html?sap-ui-xx-viewCache=false"
   },
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "andi@meszaroskft.com": {
+              "roles": [
+                "RiskViewer"
+              ],
+              "id": "Andi",
+              "password": "lőrinc"
+            },
+            "lorinc@meszaroskft.com": {
+              "roles": [
+                "RiskManager"
+              ],
+              "id": "Lölő",
+              "password": "andi"
+            }
+          }
+        }
+      }
+    }
+  },
   "sapux": [
-    "app/risks",
     "app/risks",
     "app/mitigations"
   ]
