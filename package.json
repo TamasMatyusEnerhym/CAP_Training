@@ -7,7 +7,10 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^7",
-    "express": "^4"
+    "express": "^4",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "passport": "^0"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
@@ -29,18 +32,22 @@
                 "RiskViewer"
               ],
               "id": "Andi",
-              "password": "lőrinc"
+              "password": "asd123"
             },
             "lorinc@meszaroskft.com": {
               "roles": [
                 "RiskManager"
               ],
-              "id": "Lölő",
-              "password": "andi"
+              "id": "Lőrinc",
+              "password": "asd123"
             }
           }
         }
-      }
+      },
+      "[production]": {
+        "db": "hana"
+      },
+      "auth": "xsuaa"
     }
   },
   "sapux": [
